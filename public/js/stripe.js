@@ -6,9 +6,7 @@ export const bookTour = async (tourId) => {
     console.log('Starting booking process for tour:', tourId);
 
     // 1) Отримати сесію оплати з API
-    const session = await axios(
-      `http://localhost:5050/api/bookings/checkout-session/${tourId}`
-    );
+    const session = await axios(`/api/bookings/checkout-session/${tourId}`);
 
     console.log('Session data:', session.data);
 
